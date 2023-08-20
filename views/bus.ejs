@@ -1,0 +1,43 @@
+<%- include("templates/landing")%>
+  <link rel="stylesheet" href="/css/menu.css">
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="/js/map.js" defer></script>
+
+  <div class="text-center content_general">
+  <section class="projects text-center">
+    <div class="projects__grid text-center">
+
+      <article class="projects__item">
+        <div class="col-lg-6 col-md-12 mb-3">
+          <div class="d-flex align-items-center">
+            <input id="search" class="form-control me-2" type="text" placeholder="Buscar dirección">
+            <button id="buttonact" class="btn btn-primary" onclick="searchLocation()" style="background-color: rgba(48, 52, 126, 1); display: flex; justify-content: center; align-items: center;">Buscar</button>
+          </div>
+
+          <div class="menu text-center">
+            <div class="projects__grid2 text-center btn-dark d-flex justify-content-center align-items-center">
+              <a class="item_menu" href="/bus" style="background-color: black; color: aliceblue;"><i class="bi bi-bus-front"></i> Autobus</a>
+            </div>
+          </div>
+          
+      </article>
+      <article class="projects__item1">
+        <div class="menu">
+          <section class="projects__grid2">
+            <a class="item_menu" href="/user"><i class="bi bi-person-fill"></i> Usuario</a>
+            <a class="item_menu" href="/"><i class="bi bi-house-fill"></i> Inicio</a>
+            <a class="item_menu" href="#"><i class="bi bi-map-fill"></i> Rutas</a>
+
+          </section>
+          <br>
+          <br>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+  </body>
+
+  </html>
