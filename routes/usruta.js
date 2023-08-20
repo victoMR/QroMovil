@@ -46,6 +46,10 @@ ruta.get("/bici", async (req, res) => {
     res.render("bici");
 });
 
+ruta.get("/routes_bus", async (req, res) => {
+    res.render("routes_bus");
+});
+
  //Ruta  copy solo test  ------------------------------------------------------
 ruta.get("/copy", async (req, res) => {
     res.render("home_copy");

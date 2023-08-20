@@ -1,0 +1,69 @@
+<%- include("templates/heading")%>
+
+<div class="container text-center mt-4">
+    <h1>Rutas</h1>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <input id="search" class="form-control mb-3" type="text" placeholder="Buscar ruta de autobús">
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <ul id="routeList" class="list-group"></ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-4">
+    <h3 class="text-center">Rutas Disponibles:</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <ul id="allRoutesList" class="list-group">
+          <!-- Aquí se mostrarán todas las rutas disponibles -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<script src="/js/rutas.js" defer></script>
+
+<style>
+  /* Estilos generales para la página */
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  h1, h3 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Estilos para móvil */
+  @media (max-width: 576px) {
+    .container {
+      padding: 0 15px;
+    }
+
+    .col-md-8 {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    #search {
+      font-size: 18px;
+      padding: 10px 15px;
+    }
+
+    .list-group-item {
+      font-size: 16px;
+      padding: 15px 20px;
+    }
+  }
+</style>
+<%- include("templates/menu")%>
