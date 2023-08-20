@@ -1,6 +1,83 @@
 <%- include("templates/heading")%>
 <link rel="stylesheet" href="/css/user.css" />
 
+<style>
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+  }
+
+  .perfil {
+      max-width: 400px;
+      margin: 5% auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transform: scale(0.98);
+      transition: transform 0.3s ease-in-out;
+  }
+
+
+    .perfil:hover {
+        transform: scale(1);
+    }
+
+    .overlap-group-wrapper {
+        padding: 1rem;
+    }
+
+    .overlap-group {
+        border: none; /* Asegurémonos de que no haya bordes aquí */
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 12px;
+    }
+
+    i.bi-chevron-left,
+    i.bi-arrow-left {
+        color: #555;
+        transition: color 0.3s ease-in-out;
+    }
+
+    i.bi-chevron-left:hover,
+    i.bi-arrow-left:hover {
+        color: #333;
+    }
+
+    input[readonly] {
+        background-color: #eee;
+        cursor: not-allowed;
+        border: 1px solid #ddd; /* Añadido un borde sutil para una mejor definición */
+        border-radius: 4px;
+        padding: 8px 12px;
+        width: 100%;
+    }
+
+    .btn {
+        border-radius: 20px;
+        padding: 10px 20px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    button#deleteAccountBtn:hover {
+        background-color: #d9534f;
+        border-color: #d43f00;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .perfil {
+            margin-top: 10%;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -9,7 +86,7 @@
     <div class="perfil">
         <div class="overlap-group-wrapper">
 
-            <div class="overlap-group p-4 border rounded">
+            <div class="overlap-group">
                 <a href="/home"><i class="bi bi-chevron-left h5"></i></a>
                 <!-- ... (imagen de perfil, si la tienes) ... -->
 
@@ -24,13 +101,10 @@
 
                 <div class="my-3 h5">Teléfono</div>
                 <input type="tel" disabled placeholder="<%= user.tel_persona %>" readonly>
-                <br>
-                <a href="/" class="my-3 h5 btn btn-primary mb-3 mr-2">Cerrar sesión</a>
-                <br>
-                <button id="deleteAccountBtn" class="my-3 h5 btn btn-danger mb-3 mr-2">Eliminar Cuenta</button>
-                <br>
-                <a href="/home"><i class="bi bi-chevron-left h5"></i></a>
-                <a class="btn btn-primary mb-3 mr-2" href="/home"><i class="bi bi-arrow-left"></i> Volver</a>
+                
+                <a href="/" class="btn btn-primary">Cerrar sesión</a>
+                <button id="deleteAccountBtn" class="btn btn-danger">Eliminar Cuenta</button>
+                <a class="btn btn-primary" href="/home"><i class="bi bi-arrow-left"></i> Volver</a>
             </div>
         </div>
 
