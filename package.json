@@ -1,7 +1,7 @@
 {
   "name": "qromovil",
   "version": "1.0.0",
-  "description": "",
+  "description": "mejorar el servicio de transporte publico en el estado de Queretaro.",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -9,7 +9,7 @@
     "build": "prisma generate",
     "test": "nodemon index"
   },
-  "keywords": [],
+  "keywords": ["qrobus","movilidad","medios de transporte"],
   "author": "",
   "license": "ISC",
   "engines": {
