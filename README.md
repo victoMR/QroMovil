@@ -1,2 +1,2 @@
 # QroMovil
-<img id="logo" src="/public/img/logook.png" alt="Logo"><br><br>
+<img id="logo" src="/public/img/logoCom_1.png" alt="Logo"><br><br>
