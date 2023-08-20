@@ -227,7 +227,7 @@ ruta.get("/Azucenas", isAuthenticated, async (req,res) => {
   res.render("ruta2");
 });
 
-ruta.get("/Col 10 de abril", isAuthenticated, async (req,res) => {
+ruta.get("/col_2010_20de_20abril", isAuthenticated, async (req,res) => {
   res.render("ruta3");
 });
 

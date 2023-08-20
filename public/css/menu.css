@@ -33,16 +33,15 @@ body {
 .projects__grid2 {
   display: grid;
   padding-right: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
   justify-content: center;
   align-content: center;
-  margin-left: 10%;
   gap: 10px; /* Añade espacio entre los elementos del grid */
 }
 
 .projects__grid3{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-content: center;
 }
@@ -77,6 +76,12 @@ a{
   .projects__item {
     flex-basis: 100%;
   }
+}
+
+.menu{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
   .menu .item_menu {
       float: left;
