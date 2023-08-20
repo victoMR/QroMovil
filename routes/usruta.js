@@ -170,7 +170,7 @@ ruta.get("/user", isAuthenticated, async (req, res) => {
     try {
         const user = await prisma.cliente.findUnique({
             where: {
-                curp_persona: req.session.curp_persona // Suponiendo que guardas el CURP del usuario en la sesión
+                curp_persona: req.session.curp_persona // el CURP es el usuario en la sesión
             }
         });
 
