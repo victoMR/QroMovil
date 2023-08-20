@@ -125,3 +125,41 @@ a{
   z-index: 999; /* Ensure the projects section is above the map */
 
  }
+ .emergency-button {
+  position: absolute; /* Posición absoluta respecto a su contenedor relativo más cercano */
+  top: 10px; /* Espaciado desde la parte superior */
+  right: 10px; /* Espaciado desde la derecha */
+  z-index: 1001; /* Asegurarse de que esté por encima del mapa */
+}
+
+.btn-emergency {
+  background-color: #e74c3c; /* Color de fondo rojo */
+  color: white; /* Color de texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 30px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra para darle un efecto elevado */
+  text-decoration: none; /* Remover el subrayado del enlace */
+  display: flex; /* Usamos flexbox para centrar el ícono y el texto */
+  align-items: center; /* Centrar verticalmente el ícono y el texto */
+}
+
+.btn-emergency:hover {
+  background-color: #c0392b; /* Cambiar el color de fondo al pasar el cursor */
+}
+
+.btn-emergency i {
+  margin-left: 10px; /* Espaciado a la izquierda del ícono */
+}
+
+ @media screen and (min-width: 992px) {
+  .menu .item_menu {
+      font-size: 18px;
+      padding-left: 20px;
+
+  }
+  .projects__grid2, .projects__grid3 {
+      gap: 60px;
+      padding-left: 120px;
+  }
+}

@@ -177,3 +177,37 @@
 		cursor: pointer;
 		font-size: 18px;
 	}
+	.btn-emergency {
+		color: white;
+		font-size: 24px;
+		border: none;
+		transition: background-color 0.3s ease;
+	}
+	
+	.btn-emergency:hover {
+		text-decoration: none;
+		color: white;
+		opacity: 0.9;
+	}
+	
+	.btn-emergency i {
+		margin-left: 10px;
+	}
+	
+	/* Estilo para el botón de Policía */
+	a[href="/policia"] {
+		background-color: #34495e; /* Color azul oscuro */
+	}
+	
+	a[href="/policia"]:hover {
+		background-color: #2c3e50; /* Color azul más oscuro al pasar el cursor */
+	}
+	
+	/* Estilo para el botón de Ambulancia */
+	a[href="/ambulancia"] {
+		background-color: #e74c3c; /* Color rojo */
+	}
+	
+	a[href="/ambulancia"]:hover {
+		background-color: #c0392b; /* Color rojo oscuro al pasar el cursor */
+	}
