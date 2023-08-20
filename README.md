@@ -44,7 +44,7 @@ Descubre el viaje y la inspiración detrás de nuestra aplicación.
 
 Si estás interesado en conocer más sobre el propósito, la visión y la misión detrás de QroMovil, te invitamos a ver nuestra presentación completa en Canva:
 
-[![Presentación QroMovil](https://img.shields.io/badge/📔%20Ver%20Presentación%20en-Canva-pink?style=for-the-badge&logo=canva)](https://www.canva.com/design/DAFsGMhce20/g03Cor5nfaw0sYYrCLbEZg/edit)
+[![Presentación QroMovil](https://img.shields.io/badge/📔%20Ver%20Presentación%20en-Canva-pink?style=for-the-badge&logo=canva)](https://www.canva.com/design/DAFsGMhce20/g03Cor5nfaw0sYYrCLbEZg/edit?utm_content=DAFsGMhce20&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 
 
