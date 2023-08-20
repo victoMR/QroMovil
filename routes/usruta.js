@@ -2,8 +2,17 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
+const express = require('express');
+const ruta = express.Router();
 
-var ruta = require("express").Router();
+// Middleware básico para verificar autenticación
+function isAuthenticated(req, res, next) {
+    if (req.session && req.session.curp_persona) {
+        return next();
+    } else {
+        return res.redirect('/login');
+    }
+}
 
 //Ruta general se encuentra en home -------------------------------
 ruta.get("/", async (req, res) => {
@@ -74,7 +83,7 @@ ruta.post("/register", async (req, res) => {
   }
 });
 
-ruta.post("/inicio", async (req, res) => {
+ruta.post("/login", async (req, res) => {
     const { curp, password } = req.body;
   
     try {
@@ -104,7 +113,7 @@ ruta.post("/inicio", async (req, res) => {
       req.session.usuario = persona;
   
       // Redirigir a la ruta de inicio
-      res.redirect("/inicio");
+      res.redirect("/home");
       console.log(persona.curp_persona);
       console.log("Inicio de sesión exitoso");
     } catch (error) {
@@ -135,10 +144,6 @@ ruta.get("/reporte", async (req, res) => {
 ruta.get("/routes_bus", async (req, res) => {
   res.render("routes_bus");
 });
-//Ruta  usuario ------------------------------------------------------
-ruta.get("/user", async (req, res) => {
-  res.render("user");
-});
 
 ruta.get("/bus", async (req, res) => {
   res.render("bus");
@@ -160,9 +165,55 @@ ruta.get("/puntos", async (req, res) => {
   res.render("puntos");
 });
 
-//Ruta  copy solo test  ------------------------------------------------------
-ruta.get("/copy", async (req, res) => {
-  res.render("home_copy");
+// Ruta de usuario con autenticación
+ruta.get("/user", isAuthenticated, async (req, res) => {
+    try {
+        const user = await prisma.cliente.findUnique({
+            where: {
+                curp_persona: req.session.curp_persona // Suponiendo que guardas el CURP del usuario en la sesión
+            }
+        });
+
+        if (!user) {
+            return res.redirect('/login');
+        }
+
+        res.render("user", { user });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error al obtener la información del usuario');
+    }
+});
+
+// Ruta para cerrar sesión
+ruta.get("/logout", (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).send('Error al cerrar sesión');
+        }
+        res.redirect('/login');
+    });
+});
+
+// Ruta para eliminar cuenta
+ruta.get("/deleteAccount", isAuthenticated, async (req, res) => {
+    try {
+        await prisma.cliente.delete({
+            where: {
+                curp_persona: req.session.curp_persona
+            }
+        });
+
+        req.session.destroy((err) => {
+            if (err) {
+                return res.status(500).send('Error al eliminar la cuenta y cerrar sesión');
+            }
+            res.redirect('/login');
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error al eliminar la cuenta');
+    }
 });
 
 module.exports = ruta;
