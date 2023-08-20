@@ -1,4 +1,7 @@
 # QroMovil 
+<h4 align="center">
+:construction: Proyecto en construcción :construction:
+</h4>
 
 <p align="center">
   <img src="/public/img/logo_no_back.png" alt="Logo" width="200"><br><br>
@@ -7,9 +10,6 @@
 ## Objetivo:
 Nuestro propósito es mejorar el servicio de transporte público en el estado de Querétaro. Con la integración de una aplicación móvil en la cual podrás visualizar el tiempo que tardarán en llegar los diversos servicios de transporte público como autobús, taxi y bicicleta, al sitio donde te encuentras. 
 
-<h4 align="center">
-:construction: Proyecto en construcción :construction:
-</h4>
 
 ## Funcionalidades del proyecto
 
