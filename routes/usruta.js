@@ -1,59 +1,125 @@
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
+const bcrypt = require("bcrypt");
+const dotenv = require("dotenv");
 
 var ruta = require("express").Router();
 
- //Ruta general se encuentra en home -------------------------------
+//Ruta general se encuentra en home -------------------------------
 ruta.get("/", async (req, res) => {
-    res.render("home");
-});
-//  //Ruta  home ------------------------------------------------------
-// ruta.get("/home", async (req, res) => {
-//     res.render("home");
-// });
- //Ruta  menu solo test  ------------------------------------------------------
-ruta.get("/menu", async (req, res) => {  // dev mode only
-    res.render("templates/menu");
-});
- //Ruta  911 ------------------------------------------------------
-ruta.get("/911", async (req, res) => {
-    res.render("911");
-});
- //Ruta  bestoption ia  ------------------------------------------------------
-ruta.get("/bestoption", async (req, res) => {
-    res.render("bestoption");
-});
- //Ruta  fallas ------------------------------------------------------
-ruta.get("/reporte", async (req, res) => {
-    res.render("reportes");
+  res.render("home");
 });
 
- //Ruta  rutas de el autobus ------------------------------------------------------
-ruta.get("/routes_bus", async (req, res) => {
-    res.render("routes_bus");
+ruta.get("/register", async (req, res) => {
+  res.render("register");
 });
- //Ruta  usuario ------------------------------------------------------
+
+// Ruta de inserción de nuevo usuario a la base de datos
+ruta.post("/register", async (req, res) => {
+  const { name, ap, curp, email, tel, password } = req.body;
+  const hashedPassword = await bcrypt.hash(password, 10);
+  console.log(req.body);
+
+  try {
+    const existingPerson = await prisma.cliente.findUnique({
+      where: {
+        curp_persona: curp,
+      },
+    });
+
+    if (existingPerson) {
+      return res.status(400).send("CURP invalido.");
+    }
+
+    // Obtener el último registro basado en el orden descendente de num_persona
+    const lastPersona = await prisma.cliente.findFirst({
+      orderBy: {
+        num_persona: "desc",
+      },
+      select: {
+        num_persona: true,
+      },
+    });
+
+    const newNumPersona = (lastPersona ? lastPersona.num_persona : 0) + 1;
+
+    const persona = await prisma.cliente.create({
+      data: {
+        num_persona: newNumPersona,
+        curp_persona: curp,
+        name_persona: name,
+        ap_persona: ap,
+        email_persona: email,
+        tel_persona: tel,
+        password_persona: hashedPassword,
+        status_persona: true,
+      },
+    });
+
+    req.session.curp_persona = persona.curp_persona;
+    req.session.usuario = persona;
+
+    res.redirect("/");
+    console.log("Registro de cliente insertado en la base de datos");
+  } catch (error) {
+    console.log(
+      "Error al insertar el registro de cliente en la base de datos:",
+      error
+    );
+    res.status(500).redirect("/error");
+  }
+});
+
+//Ruta  menu solo test  ------------------------------------------------------
+ruta.get("/menu", async (req, res) => {
+  // dev mode only
+  res.render("templates/menu");
+});
+//Ruta  911 ------------------------------------------------------
+ruta.get("/911", async (req, res) => {
+  res.render("911");
+});
+//Ruta  bestoption ia  ------------------------------------------------------
+ruta.get("/bestoption", async (req, res) => {
+  res.render("bestoption");
+});
+//Ruta  fallas ------------------------------------------------------
+ruta.get("/reporte", async (req, res) => {
+  res.render("reportes");
+});
+
+//Ruta  rutas de el autobus ------------------------------------------------------
+ruta.get("/routes_bus", async (req, res) => {
+  res.render("routes_bus");
+});
+//Ruta  usuario ------------------------------------------------------
 ruta.get("/user", async (req, res) => {
-    res.render("user");
+  res.render("user");
 });
 
 ruta.get("/bus", async (req, res) => {
-    res.render("bus");
+  res.render("bus");
 });
 
 ruta.get("/taxi", async (req, res) => {
-    res.render("taxi");
+  res.render("taxi");
 });
 
 ruta.get("/bici", async (req, res) => {
-    res.render("bici");
+  res.render("bici");
 });
 
 ruta.get("/routes_bus", async (req, res) => {
-    res.render("routes_bus");
+  res.render("routes_bus");
 });
 
- //Ruta  copy solo test  ------------------------------------------------------
+ruta.get("/puntos", async (req, res) => {
+  res.render("puntos");
+});
+
+//Ruta  copy solo test  ------------------------------------------------------
 ruta.get("/copy", async (req, res) => {
-    res.render("home_copy");
+  res.render("home_copy");
 });
 
 module.exports = ruta;

@@ -1,0 +1,114 @@
+.puntos,
+.puntos * {
+  box-sizing: border-box;
+}
+
+.puntos {
+  background: #ffffff;
+  width: 390px;
+  height: 844px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rectangle-28 {
+  border-radius: 0px;
+  position: absolute;
+  left: 23px;
+  top: 27px;
+  overflow: visible;
+}
+/* Positioning and centering the SVG */
+.svg-img {
+    position: absolute;
+    top: 30%;  /* Ajusta este valor según sea necesario para que esté justo encima de la barra de progreso */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Asegura que el SVG esté centrado */
+    width: 189px; /* Anchura del SVG */
+    height: 161px; /* Altura del SVG */
+}
+
+.puntos-1 {
+  width: 203px;
+  height: 52px;
+  position: absolute;
+  left: 84px;
+  top: 48px;
+}
+.progress-container {
+    width: 80%;  /* Adjust as needed */
+    margin: 0 auto;  /* Centers the progress bar horizontally */
+    padding: 10px;
+    background-color: #f3f3f3;  /* Background color for the container */
+    border-radius: 5px;  /* Rounded corners */
+    position: absolute;
+    top: 50%;  /* Adjust this to place it vertically at the middle of the parent container */
+    left: 50%;  /* Center the container horizontally */
+    transform: translate(-50%, -50%); /* Ensures it's truly centered */
+}
+
+.progress {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;  /* Background color for the progress bar */
+    border-radius: 3px;  /* Rounded corners */
+}
+
+.progress-bar {
+    height: 100%;
+    line-height: 20px;  /* Centers the text vertically */
+    text-align: center;  /* Centers the text horizontally */
+    color: white;  /* Text color */
+    background-color: #2C56EA;  /* Color of the progress indicator */
+    border-radius: 3px;  /* Rounded corners */
+}
+
+.texto_baner {
+    position: absolute;
+    top: 55%; /* Adjust as needed to position it below the progress bar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* You can adjust this if you want the text to occupy more or less width */
+    text-align: center;
+}
+
+.redirect-button {
+    background: #30347e;
+    border-radius: 20px;
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    left: 70px; 
+    top: 700px; /* Adjust as needed */
+    text-align: center;
+    line-height: 50px; /* Vertically center the text */
+  }
+  
+  .redirect-button button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font: 400 20px "Inder", sans-serif;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .redirect-button button:hover {
+    background: #2C56EA; /* Slight color change on hover for better user feedback */
+  }
+  
+  .redirect-button a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,57 @@
+<%- include("templates/heading")%>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-10">
+            <img class="text-center d-block mx-auto mb-4" src="/img/logoCom_1.png" alt="logo" width="200">
+
+            <h1 class="text-center mb-4">Registro de Usuario</h1>
+
+            <!-- Elemento para mostrar la alerta -->
+            <div id="alertContainer"></div>
+
+            <form action="/register" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre :</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required autofocus maxlength="15">
+                </div>
+
+                <div class="mb-3">
+                    <label for="ap" class="form-label">Apellido:</label>
+                    <input type="text" class="form-control" id="ap" name="ap" placeholder="Apellido" required autofocus maxlength="15">
+                </div>
+
+                <div class="mb-3">
+                    <label for="ap" class="form-label">CURP:</label>
+                    <input type="text" class="form-control" id="curp" name="curp" placeholder="CURP" required autofocus minlength="18" maxlength="18">
+                    <small id="HelpInline" class="form-text text-muted"><a href="https://www.gob.mx/curp/" target="_blank" rel="noopener noreferrer">No te sabes tu curp ?</a></small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="ap" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@gmail.com" required autofocus maxlength="35">
+                </div>
+
+                <div class="mb-3">
+                    <label for="ap" class="form-label">Telefono:</label>
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="442000000" required autofocus maxlength="15">
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña:</label>
+                    <input type="password" id="password" class="form-control" name="password" aria-describedby="passwordHelpInline" required placeholder="12@aBC" maxlength="20" minlength="8">
+                    <small id="passwordHelpInline" class="form-text text-muted">Debe tener entre 8 y 20 caracteres.</small>
+                </div>
+
+                <div class="mb-4 text-center">
+                    <a href="./login">¿Ya tienes cuenta?</a>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

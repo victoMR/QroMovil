@@ -1,0 +1,21 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = []
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Cliente {
+  num_persona      Int      @id @default(autoincrement())
+  name_persona     String
+  ap_persona       String
+  curp_persona     String?  @unique
+  email_persona    String
+  tel_persona      String
+  password_persona String?
+  status_persona   Boolean?
+}
