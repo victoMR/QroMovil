@@ -216,4 +216,19 @@ ruta.get("/deleteAccount", isAuthenticated, async (req, res) => {
     }
 });
 
+//-----------Rutas para cada ruta de transporte publico--------
+
+//Ruta Juncos
+ruta.get("/Juncos", isAuthenticated, async (req,res) => {
+  res.render("ruta1");
+});
+
+ruta.get("/Azucenas", isAuthenticated, async (req,res) => {
+  res.render("ruta2");
+});
+
+ruta.get("/Col 10 de abril", isAuthenticated, async (req,res) => {
+  res.render("ruta3");
+});
+
 module.exports = ruta;

@@ -6,7 +6,7 @@ const searchInput = document.getElementById("search");
   const routes = [
     { "id": 10, "name": "Juncos" },
     { "id": 2, "name": "Azucenas" },
-    { "id": 3, "name": "Col. 10 de abril" },
+    { "id": 3, "name": "Col 10 de abril" },
     { "id": 4, "name": "Las Flores" },
     { "id": 5, "name": "Bosque Real" },
     { "id": 6, "name": "Valle Verde" },
@@ -21,28 +21,40 @@ const searchInput = document.getElementById("search");
 ];
 
   
-  searchInput.addEventListener("input", () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    routeList.innerHTML = "";
+searchInput.addEventListener("input", () => {
+  const searchTerm = searchInput.value.toLowerCase();
+  routeList.innerHTML = "";
 
-    if (searchTerm.length === 0) {
-      return; // No mostrar sugerencias si no hay texto en la búsqueda
-    }
-  
-    const filteredRoutes = routes.filter(route => route.name.toLowerCase().includes(searchTerm));
-  
-    filteredRoutes.forEach(route => {
-      const li = document.createElement("li");
-      li.textContent = route.name;
-      li.classList.add("list-group-item");
-      routeList.appendChild(li);
-    });
+  if (searchTerm.length === 0) {
+      return;
+  }
+
+  const filteredRoutes = routes.filter(route => route.name.toLowerCase().includes(searchTerm));
+
+  filteredRoutes.forEach(route => {
+      const button = document.createElement("button");
+      button.textContent = route.name;
+      button.classList.add("list-group-item", "route-button");
+      button.addEventListener("click", () => {
+          redirectToRoute(route.id); // Llamada a función para redirigir al usuario
+      });
+      routeList.appendChild(button);
   });
-  
-  // Mostrar todas las rutas disponibles
-  routes.forEach(route => {
-    const li = document.createElement("li");
-    li.textContent = route.name;
-    li.classList.add("list-group-item");
-    allRoutesList.appendChild(li);
+});
+
+routes.forEach(route => {
+  const button = document.createElement("button");
+  button.textContent = route.name;
+  button.classList.add("list-group-item", "route-button");
+  button.addEventListener("click", () => {
+      redirectToRoute(route.name); // Llamada a función para redirigir al usuario
   });
+  allRoutesList.appendChild(button);
+});
+
+function redirectToRoute(routeName) {
+  // Aquí debes realizar la redirección del usuario utilizando la información del routeId
+  // Por ejemplo, puedes utilizar window.location.href o fetch para redirigir a través del servidor
+  window.location.href = '/' + encodeURIComponent(routeName);
+  console.log("Redirigiendo al usuario a la ruta con Nombre:", routeName);
+}
