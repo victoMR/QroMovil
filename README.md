@@ -49,8 +49,12 @@ Si estás interesado en conocer más sobre el propósito, la visión y la misió
 
 
 
-## 📁 Acceso al proyecto
-Puedes consultar su funcionalidad hasta el momento [▶️](https://qromovil.onrender.com)
+## 🚀 Acceso al Proyecto
+
+¿Quieres ver QroMovil en acción? Haz clic en el botón a continuación para explorar nuestras características y funcionalidades actuales:
+
+[![Acceder a QroMovil](https://img.shields.io/badge/▶️%20Acceder%20a-QroMovil-blue?style=for-the-badge&logo=web)](https://qromovil.onrender.com)
+
 
 ## 📋 Requisitos
 
