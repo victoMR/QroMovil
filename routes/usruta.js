@@ -7,8 +7,12 @@ var ruta = require("express").Router();
 
 //Ruta general se encuentra en home -------------------------------
 ruta.get("/", async (req, res) => {
-  res.render("home");
+  res.render("login");
 });
+
+ruta.get("/home", async (req, res) => {
+    res.render("home");
+  });
 
 ruta.get("/register", async (req, res) => {
   res.render("register");
@@ -59,7 +63,7 @@ ruta.post("/register", async (req, res) => {
     req.session.curp_persona = persona.curp_persona;
     req.session.usuario = persona;
 
-    res.redirect("/");
+    res.redirect("/home");
     console.log("Registro de cliente insertado en la base de datos");
   } catch (error) {
     console.log(
@@ -69,6 +73,45 @@ ruta.post("/register", async (req, res) => {
     res.status(500).redirect("/error");
   }
 });
+
+ruta.post("/inicio", async (req, res) => {
+    const { curp, password } = req.body;
+  
+    try {
+      const persona = await prisma.cliente.findUnique({
+        where: {
+          curp_persona: curp,
+        },
+      });
+  
+      if (!persona) {
+        // El cliente no existe en la base de datos
+        return res.status(400).send("Credenciales incorrectas").redirect("/error");
+      }
+  
+      const passwordMatch = await bcrypt.compare(
+        password,
+        persona.password_persona
+      );
+      if (!passwordMatch) {
+        // La contraseña no coincide
+        return res.status(400).send("Credenciales incorrectas").redirect("/error");
+      }
+  
+      // Las credenciales son válidas, se inicia sesión exitosamente
+      req.session.curp_persona = persona.curp_persona;
+      // Almacenar la información del usuario en la sesión
+      req.session.usuario = persona;
+  
+      // Redirigir a la ruta de inicio
+      res.redirect("/inicio");
+      console.log(persona.curp_persona);
+      console.log("Inicio de sesión exitoso");
+    } catch (error) {
+      console.log("Error al verificar las credenciales:", error);
+      res.status(500).redirect("/error");
+    }
+  });
 
 //Ruta  menu solo test  ------------------------------------------------------
 ruta.get("/menu", async (req, res) => {
