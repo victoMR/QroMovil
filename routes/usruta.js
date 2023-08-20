@@ -22,9 +22,10 @@ ruta.get("/bestoption", async (req, res) => {
     res.render("bestoption");
 });
  //Ruta  fallas ------------------------------------------------------
-ruta.get("/faliures", async (req, res) => {
-    res.render("faliures");
+ruta.get("/reporte", async (req, res) => {
+    res.render("reportes");
 });
+
  //Ruta  rutas de el autobus ------------------------------------------------------
 ruta.get("/routes_bus", async (req, res) => {
     res.render("routes_bus");

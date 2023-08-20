@@ -1,0 +1,250 @@
+.reportes,
+.reportes * {
+  box-sizing: border-box;
+}
+.reportes {
+  background: #ffffff;
+  width: 390px;
+  height: 844px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rectangle-28 {
+  border-radius: 0px;
+  position: absolute;
+  left: 23px;
+  top: 27px;
+  overflow: visible;
+}
+
+.reportes-1 {
+  width: 203px;
+  height: 52px;
+  position: absolute;
+  left: 84px;
+  top: 48px;
+}
+
+.terms-and-conditions {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 263px;
+  top: 140px;
+}
+
+.medium-risk {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  left: 289px;
+  top: 55px;
+}
+
+.haz-tu-reporte-aqu {
+  color: #000000;
+  text-align: left;
+  font: 400 20px "Inder", sans-serif;
+  position: absolute;
+  left: 44px;
+  top: 151px;
+  width: 241px;
+  height: 28px;
+}
+
+.lee-el-qr-del-autob-s {
+  color: #000000;
+  text-align: left;
+  font: 400 20px "Inder", sans-serif;
+  position: absolute;
+  left: 44px;
+  top: 193px;
+  width: 221px;
+  height: 43px;
+}
+
+.image-1 {
+  width: 300px;
+  height: 245px;
+  position: absolute;
+  left: 40px;
+  top: 272px;
+}
+
+.presiona-aqui-para-leer-o-colocar-el-qr {
+  color: #000000;
+  text-align: left;
+  font: 400 20px "Inder", sans-serif;
+  position: absolute;
+  left: 80px;
+  top: 517px;
+  width: 240px;
+  height: 47px;
+}
+
+.rectangle-36 {
+  background: rgba(217, 217, 217, 0.36);
+  border-radius: 20px;
+  width: 313px;
+  height: 59px;
+  position: absolute;
+  left: 40px;
+  top: 595px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.image-2 {
+  width: 49px;
+  margin-left: 15px;
+  height: 38px;
+  position: absolute;
+  left: 40px;
+  top: 601px;
+}
+
+.multiply {
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 40px;
+  height: 53px;
+  position: absolute;
+  left: 44px;
+  top: 578px;
+}
+
+.no-puedes-escanear {
+  color: #000000;
+  text-align: left;
+  font: 400 20px "Inder", sans-serif;
+  position: absolute;
+  left: 113px;
+  top: 595px;
+  width: 221px;
+  height: 19px;
+}
+
+.presiona-aqui-para-crear-un-reporte-o-sugerencia-del-servicio-o-aplicaci-n {
+  color: #000000;
+  text-align: justified;
+  font: 400 12px "Inder", sans-serif;
+  position: absolute;
+  left: 120px;
+  top: 622px;
+  width: 224px;
+  height: 18px;
+}
+
+.rectangle-12 {
+  background: #30347e;
+  border-radius: 20px 20px 0px 0px;
+  width: 394px;
+  height: 131px;
+  position: absolute;
+  left: -4px;
+  top: 726px;
+}
+
+.rectangle-38 {
+  background: #30347e;
+  border-radius: 20px 20px 0px 0px;
+  width: 394px;
+  height: 131px;
+  position: absolute;
+  left: -4px;
+  top: 726px;
+}
+
+.rectangle-37 {
+  background: #30347e;
+  border-radius: 20px 20px 0px 0px;
+  width: 394px;
+  height: 131px;
+  position: absolute;
+  left: -4px;
+  top: 726px;
+}
+
+.user {
+  width: 37px;
+  height: 41px;
+  position: absolute;
+  left: 18px;
+  top: 744px;
+}
+
+.journey {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 37px;
+  height: 41px;
+  position: absolute;
+  left: 95px;
+  top: 744px;
+}
+
+.error {
+  width: 40px;
+  height: 45px;
+  position: absolute;
+  left: 250px;
+  top: 743px;
+}
+
+.home-page {
+  width: 37px;
+  height: 41px;
+  position: absolute;
+  left: 173px;
+  top: 744px;
+}
+
+.police-badge {
+  width: 41px;
+  height: 46px;
+  position: absolute;
+  left: 331px;
+  top: 743px;
+}
+
+.redirect-button {
+    background: #30347e;
+    border-radius: 20px;
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    left: 70px; 
+    top: 700px; /* Adjust as needed */
+    text-align: center;
+    line-height: 50px; /* Vertically center the text */
+  }
+  
+  .redirect-button button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font: 400 20px "Inder", sans-serif;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .redirect-button button:hover {
+    background: #2C56EA; /* Slight color change on hover for better user feedback */
+  }
+  
+  .redirect-button a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  
+  
+  

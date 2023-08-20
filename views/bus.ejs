@@ -1,9 +1,43 @@
 <%- include("templates/landing")%>
   <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/menu_user.css">
   <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="/js/map.js" defer></script>
+  <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="/js/map.js" defer></script> -->
+<div>
+  <img id="map" src="/img/ejeBus.png" alt="">
+</div>
+
+
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+  <div class="cont-menu">
+    <nav>
+      <h2 style="color: white;"><img src="/img/logook.png" alt="img perfil" style="height: 50px; width: 50px;">Usuario</h2>
+      <a href="/user"><h2>Perfil</h2></a>
+      <a href="#"><h2>PuntosQro</h2></a>
+      <a href="#"><h2>Ayuda</h2></a>
+    </nav>
+    <label for="btn-menu">✖️</label>
+  </div>  
+</div>
+
+<input type="checkbox" id="btn-menu2">
+<div class="container-menu2">
+  <div class="cont-menu2">
+    <nav>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <a href="#"><h2 style="color: rgb(0, 255, 0);">Bus 15 Minutos</h2></a>
+      <br>
+      <a href="#"><h2 style="color: yellow;">Taxi 20 minutos</h2></a>
+      <br>
+      <a href="#"><h2 style="color: red;">Bici 50 minutos</h2></a>
+    </nav>
+    <label for="btn-menu2">✖️</label>  
+  </div>  
+</div>
+
 
   <div class="text-center content_general">
   <section class="projects text-center">
@@ -13,7 +47,9 @@
         <div class="col-lg-6 col-md-12 mb-3">
           <div class="d-flex align-items-center">
             <input id="search" class="form-control me-2" type="text" placeholder="Buscar dirección">
-            <button id="buttonact" class="btn btn-primary" onclick="searchLocation()" style="background-color: rgba(48, 52, 126, 1); display: flex; justify-content: center; align-items: center;">Buscar</button>
+            <div class="item_menu btn-menu2">
+              <label for="btn-menu2" id="buttonact" class="btn btn-primary" onclick="searchLocation()" style="background-color: rgba(48, 52, 126, 1); display: flex; justify-content: center; align-items: center;">Buscar</label>
+            </div>
           </div>
 
           <div class="menu text-center">
@@ -26,10 +62,12 @@
       <article class="projects__item1">
         <div class="menu">
           <section class="projects__grid2">
-            <a class="item_menu" href="/user"><i class="bi bi-person-fill"></i> Usuario</a>
+            <div class="item_menu btn-menu">
+              <label for="btn-menu"><i class="bi bi-person-fill"></i> Usuario</label>
+            </div>
             <a class="item_menu" href="/"><i class="bi bi-house-fill"></i> Inicio</a>
-            <a class="item_menu" href="#"><i class="bi bi-map-fill"></i> Rutas</a>
-
+            <a class="item_menu" href="/routes_bus"><i class="bi bi-map-fill"></i> Rutas</a>
+            <a class="item_menu" href="/reporte"><i class="bi bi-map-fill"></i> Quejas</a>
           </section>
           <br>
           <br>

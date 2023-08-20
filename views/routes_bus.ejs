@@ -1,4 +1,21 @@
 <%- include("templates/heading")%>
+<link rel="stylesheet" href="/css/menu_user.css">
+<link rel="stylesheet" href="/css/menu_user.css">
+
+<input type="checkbox" id="btn-menu">
+          <div class="container-menu">
+            <div class="cont-menu">
+              <nav>
+                <h2 style="color: white;"><img src="/img/logook.png" alt="img perfil" style="height: 50px; width: 50px;">Usuario</h2>
+                <a href="/user"><h2>Perfil</h2></a>
+                <a href="#"><h2>PuntosQro</h2></a>
+                <a href="#"><h2>Ayuda</h2></a>
+              </nav>
+              <label for="btn-menu">✖️</label>
+            </div>  
+          </div>
+
+
 
 <div class="container text-center mt-4">
     <h1>Rutas</h1>
@@ -66,4 +83,28 @@
     }
   }
 </style>
-<%- include("templates/menu")%>
+<div class="text-center content_general">
+  <section class="projects text-center">
+    <div class="projects__grid text-center">
+
+          </div>
+
+      </article>
+      <article class="projects__item1">
+        <div class="menu">
+          <section class="projects__grid2">
+
+            <div class="item_menu btn-menu">
+              <label for="btn-menu"><i class="bi bi-person-fill"></i> Usuario</label>
+            </div>
+            <a class="item_menu" href="/"><i class="bi bi-house-fill"></i> Inicio</a>
+            <a class="item_menu" href="/routes_bus"><i class="bi bi-map-fill"></i> Rutas</a>
+            <a class="item_menu" href="/reporte"><i class="bi bi-map-fill"></i> Quejas</a>
+          </section>
+          <br>
+          <br>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>

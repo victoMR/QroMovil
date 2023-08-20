@@ -31,7 +31,7 @@ body {
 
 .projects__grid2{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-content: center;
 }

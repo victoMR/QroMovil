@@ -7,8 +7,19 @@ const searchInput = document.getElementById("search");
     { "id": 10, "name": "Juncos" },
     { "id": 2, "name": "Azucenas" },
     { "id": 3, "name": "Col. 10 de abril" },
-    // Agregar más rutas según sea necesario
-  ];
+    { "id": 4, "name": "Las Flores" },
+    { "id": 5, "name": "Bosque Real" },
+    { "id": 6, "name": "Valle Verde" },
+    { "id": 7, "name": "El Roble" },
+    { "id": 8, "name": "Rinconada" },
+    { "id": 9, "name": "Santa Lucía" },
+    { "id": 11, "name": "Monte Bello" },
+    { "id": 12, "name": "Los Pinos" },
+    { "id": 13, "name": "Prado Norte" },
+    { "id": 14, "name": "San Ángel" },
+    // You can add more routes as needed
+];
+
   
   searchInput.addEventListener("input", () => {
     const searchTerm = searchInput.value.toLowerCase();
