@@ -38,7 +38,16 @@ Estamos emocionados de compartir nuestra visión para QroMovil. Si estás intere
 
 [![Diseños QroMovil en Figma](https://img.shields.io/badge/🔍%20Ver%20Mockups%20en-Figma-blue?style=for-the-badge&logo=figma)](https://www.figma.com/proto/S56E5gpxtVZyJaDqsULoq0/QroMovil?type=design&node-id=155-137&t=QDQWr52o9JFAvxBn-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A5)
 
-Dale un vistazo y descubre la experiencia que queremos brindar a nuestros usuarios.
+Descubre el viaje y la inspiración detrás de nuestra aplicación.
+
+### 📖 Presentación de Propuesta
+
+Si estás interesado en conocer más sobre el propósito, la visión y la misión detrás de QroMovil, te invitamos a ver nuestra presentación completa en Canva:
+
+[![Presentación QroMovil](https://img.shields.io/badge/📔%20Ver%20Presentación%20en-Canva-pink?style=for-the-badge&logo=canva)](https://www.canva.com/design/DAFsGMhce20/g03Cor5nfaw0sYYrCLbEZg/edit)
+
+
+
 
 ## 📁 Acceso al proyecto
 Puedes consultar su funcionalidad hasta el momento [▶️](https://qromovil.onrender.com)
