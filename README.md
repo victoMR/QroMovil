@@ -25,29 +25,35 @@ Estan pensados otros puntos a considerar, pero serian implementados mas adelante
 
 \## 📁 Acceso al proyecto
 Puedes consultar su funcionalidad hasta el momento dando click en el siguiente enlace: 
-<a href="https://www.ejemplo.com">QroMóvil</a>
+<a href="https://qromovil.onrender.com">QroMóvil</a>
 
 \## 🛠️ Abre y ejecuta el proyecto
 
-Iniciar proyecto de node :
-``` terminal
-npm init -y
-```
-
-Instalr dependencias 
+Instalar dependencias 
 ``` terminal
 npm i 
 ```
+
 Que dependencias de node son:
 ``` terminal
+npm i @prisma/client
+npm i animate.css
+npm i bcrypt
+npm i bootstrap
+npm i bootstrap-icons
+npm i dotenv
 npm i ejs
-npm i embellish.css
 npm i express
-npm i  express-session
-npm i  mx
-npm i  nodemon -G
+npm i express-session
+npm i method-override
+npm i nodemon
+npm i path
+npm i prisma
 ```
-Iniciar servidor :
+
+Iniciar proyecto de node :
 ``` terminal
-npm start
-``` 
+npm start 
+npm run dev
+```
+
