@@ -2,7 +2,7 @@
 <h4 align="center">
 :construction: Proyecto en construcción :construction:
 </h4>
-
+<br>
 <p align="center">
   <img src="/public/img/logo_no_back.png" alt="Logo" width="200"><br><br>
 </p>
@@ -32,8 +32,16 @@ Nuestro propósito es mejorar el servicio de transporte público en el estado de
 5. **Escalabilidad**
    - En etapas futuras se considera la implementación de un servicio de "Emergencias" para solicitar asistencia policial cercana en caso de inconvenientes.
 
+### 🎨 Diseño y Mockups
+
+Estamos emocionados de compartir nuestra visión para QroMovil. Si estás interesado en explorar nuestros diseños y mockups, te invitamos a visitar nuestra presentación interactiva en Figma:
+
+[![Diseños QroMovil en Figma](https://img.shields.io/badge/🔍%20Ver%20Mockups%20en-Figma-blue?style=for-the-badge&logo=figma)](https://www.figma.com/proto/S56E5gpxtVZyJaDqsULoq0/QroMovil?type=design&node-id=155-137&t=QDQWr52o9JFAvxBn-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A5)
+
+Dale un vistazo y descubre la experiencia que queremos brindar a nuestros usuarios.
+
 ## 📁 Acceso al proyecto
-Puedes consultar su funcionalidad hasta el momento [▶️](https://qromovil.onrender.com).
+Puedes consultar su funcionalidad hasta el momento [▶️](https://qromovil.onrender.com)
 
 ## 📋 Requisitos
 
