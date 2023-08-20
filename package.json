@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
+    "postinstall": "prisma generate",
+    "build": "prisma generate",
     "test": "nodemon index"
   },
   "keywords": [],
